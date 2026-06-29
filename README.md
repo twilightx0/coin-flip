@@ -33,8 +33,5 @@ git clone https://github.com/YourUsername/YourRepository.git
 
 ## 📸 Preview
 
-(Add a screenshot here later.)
+<img width="1918" height="875" alt="image" src="https://github.com/user-attachments/assets/d1e6150e-ae63-4b3a-bf3b-dccd06dd26b0" />
 
-## 📄 License
-
-This project is available under the MIT License.
