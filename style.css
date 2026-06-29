@@ -1,0 +1,276 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: system-ui, sans-serif;
+}
+
+body {
+  background: #0b0f1a;
+  color: #e5e7eb;
+}
+
+/* ===== BANNER ===== */
+.banner {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem 2rem;
+  background: linear-gradient(90deg, #e8af05, #a40e0e );
+  color: #020617;
+}
+
+.banner h1 {
+  font-size: 1.8rem;
+}
+
+.logo {
+  width: 40px;
+  height: 40px;
+}
+
+/* ===== LAYOUT ===== */
+.layout {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 2rem;
+  padding: 2rem;
+}
+
+.left {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.right {
+  background: #020617;
+  padding: 1rem;
+  border-radius: 14px;
+  overflow-y: auto;
+}
+
+/* ===== INPUT CARDS ===== */
+.card {
+  background: #020617;
+  padding: 1rem;
+  border-radius: 12px;
+}
+
+input {
+  width: 100%;
+  padding: 0.6rem;
+  margin-top: 0.4rem;
+  border-radius: 8px;
+  border: none;
+  background: #1e293b;
+  color: #e5e7eb;
+}
+
+/* ===== COIN ===== */
+.coin-area {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.coin {
+  width: 120px;
+  height: 120px;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 0.8s ease;
+  cursor: pointer;
+}
+
+.coin div {
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  font-size: 2.5rem;
+  font-weight: bold;
+  backface-visibility: hidden;
+}
+
+.front {
+  background: gold;
+  color: #020617;
+}
+
+.back {
+  background: silver;
+  color: #020617;
+  transform: rotateY(180deg);
+}
+
+/* optional JS can toggle this */
+/* ===== COIN (CLEAN & HONEST) ===== */
+
+.coin-area {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.coin {
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+  background: radial-gradient(circle at top, #fde68a, #ca8a04);
+  color: #020617;
+  font-size: 2.5rem;
+  font-weight: 800;
+
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+}
+
+.coin:active {
+  transform: scale(0.95);
+}
+
+.coin.flash {
+  transform: scale(1.1);
+}
+
+/* result text */
+#coinResult {
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+.coin.heads {
+  background: radial-gradient(circle at top, #fde68a, #ca8a04);
+  color: #020617;
+}
+
+.coin.tails {
+  background: radial-gradient(circle at top, #e5e7eb, #9ca3af);
+  color: #020617;
+}
+
+
+.hint {
+  opacity: 0.6;
+}
+
+/* ===== HISTORY ===== */
+#history {
+  list-style: none;
+  margin-top: 1rem;
+}
+
+#history li {
+  padding: 0.4rem 0;
+  border-bottom: 1px solid #1e293b;
+  font-size: 0.85rem;
+}
+
+/* ===== CAT ===== */
+.cat {
+  font-size: 4rem;
+  text-align: center;
+  opacity: 0.7;
+}
+
+/* ===== CREATE LOBBY ===== */
+.create {
+  padding: 2rem;
+  background: #020617;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+button {
+  padding: 0.6rem;
+  border-radius: 8px;
+  border: none;
+  font-weight: 600;
+  cursor: pointer;
+  background: linear-gradient(135deg, #e8af05, #a40e0e);
+  color: #020617;
+}
+
+button:hover {
+  filter: brightness(1.1);
+}
+.coin.spinning {
+  animation: spin 0.8s ease;
+}
+
+@keyframes spin {
+  from {
+    transform: rotateY(0deg);
+  }
+  to {
+    transform: rotateY(720deg);
+  }
+}
+.history-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.9rem;
+}
+
+.history-table th {
+  text-align: left;
+  padding: 0.5rem;
+  border-bottom: 2px solid #1e293b;
+  color: #94a3b8;
+}
+
+.history-table td {
+  padding: 0.45rem;
+  border-bottom: 1px solid #1e293b;
+}
+
+.history-table tr:hover {
+  background: rgba(148, 163, 184, 0.05);
+}
+
+.history-table .heads {
+  color: gold;
+  font-weight: 600;
+}
+
+.history-table .tails {
+  color: silver;
+  font-weight: 600;
+}
+.coin {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: gold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 32px;
+  cursor: pointer;
+  user-select: none;
+}
+
+.coin.spinning {
+  animation: spin 0.6s linear infinite;
+}
+
+.coin.heads {
+  background: gold;
+}
+
+.coin.tails {
+  background: silver;
+}
+
+@keyframes spin {
+  from { transform: rotateY(0deg); }
+  to   { transform: rotateY(360deg); }
+}

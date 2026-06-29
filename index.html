@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>Coin Flip Lobby</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <!-- ===== TOP BANNER ===== -->
+  <header class="banner">
+    <img src="cat.png" alt="coin logo" class="logo" />
+    <h1>Coin Flip</h1>
+  </header>
+
+  <!-- ===== MAIN LAYOUT ===== -->
+  <main class="layout">
+
+    <!-- LEFT SIDE -->
+    <section class="left">
+
+      <div class="card">
+        <label>Lobby ID</label>
+        <input id="lobbyId" placeholder="room123" />
+      </div>
+
+      <div class="card" id="passwordBlock">
+        <label>Password (to flip)</label>
+        <input id="password" type="password" />
+      </div>
+
+      <!-- COIN -->
+       <center>
+        <div class="card" style="align-items:center;">
+        <div class="coin" id="coin">?</div>
+        <p id="flipResult">—</p>
+      </div>
+       </center>
+      
+      <!-- CAT PLACEHOLDER -->
+      <div class="cat">
+        <img src="withcat.png" height="150" width="150">
+      </div>
+
+    </section>
+
+    <!-- RIGHT SIDE -->
+    <aside class="right">
+      <h2>Flip History</h2>
+      <table class="history-table">
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>Time</th>
+            <th>Result</th>
+          </tr>
+        </thead>
+        <tbody id="history"></tbody>
+      </table>
+    </aside>
+
+  </main>
+
+  <!-- ===== CREATE LOBBY ===== -->
+  <footer class="create">
+    <h2>Create Lobby</h2>
+
+    <input id="newLobbyId" placeholder="New lobby ID" />
+    <input id="newPassword" type="password" placeholder="Password" />
+    <input id="expiryDays" type="number" value="7" min="1" max="30" />
+
+    <button onclick="createLobby()">Create Lobby</button>
+    <button onclick="copyLobbyLink()">Copy Lobby Link</button>
+
+    <p id="createStatus"></p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
