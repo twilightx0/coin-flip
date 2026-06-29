@@ -18,6 +18,7 @@ https://coin-flip0.netlify.app/
 - HTML
 - CSS
 - JavaScript
+- SQL
 
 ## 📸 Preview
 
